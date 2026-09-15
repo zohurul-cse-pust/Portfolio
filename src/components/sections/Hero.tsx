@@ -86,7 +86,7 @@ export default function Hero() {
             {/* Bio */}
             <div className="space-y-4 max-w-2xl mb-8 animate-fade-up" style={{ animationDelay: '0.5s' }}>
               {personalInfo.bio.map((para, i) => (
-                <p key={i} className="text-neutral-300 leading-relaxed text-base">
+                <p key={i} className="text-neutral-300 leading-relaxed text-base text-justify">
                   {para}
                 </p>
               ))}
