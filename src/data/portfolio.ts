@@ -161,8 +161,11 @@ export const awards: AwardItem[] = [
 ];
 
 export const socialLinks = [
-  { name: 'Google Scholar', url: '#', icon: 'graduation' },
-  { name: 'ResearchGate', url: '#', icon: 'research' },
-  { name: 'LinkedIn', url: '#', icon: 'linkedin' },
+  { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=SXeNViUAAAAJ&hl=en', icon: 'graduation' },
+  { name: 'ResearchGate', url: 'https://www.researchgate.net/profile/Md-Zohurul-Islam-2?ev=hdr_xprf', icon: 'research' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/md-zohurul-islam-a80673292/', icon: 'linkedin' },
+  { name: 'Facebook', url: 'https://www.facebook.com/ZOHURUL.CSE.PUST/', icon: 'facebook' },
+  { name: 'ORCID', url: 'https://orcid.org/my-orcid?orcid=0009-0008-7113-6788', icon: 'orcid' },
+  { name: 'Web of Science', url: 'https://www.webofscience.com/wos/author/record/PQV-7917-2026', icon: 'webofscience' },
   { name: 'Email', url: 'mailto:mdzohu@gmail.com', icon: 'email' },
 ];

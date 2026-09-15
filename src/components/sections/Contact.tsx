@@ -1,4 +1,4 @@
-import { Mail, MapPin, GraduationCap, BookOpen, Linkedin, Send, Copy, Check } from 'lucide-react';
+import { Mail, MapPin, GraduationCap, BookOpen, Linkedin, Facebook, BadgeCheck, Globe, Send, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { personalInfo } from '@/data/portfolio';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
@@ -14,24 +14,45 @@ type SocialLink = {
 const socials: SocialLink[] = [
   {
     name: 'Google Scholar',
-    url: '#',
+    url: 'https://scholar.google.com/citations?user=SXeNViUAAAAJ&hl=en',
     icon: <GraduationCap size={24} />,
     color: 'bg-white text-neutral-700 border-neutral-200',
     hoverColor: 'hover:bg-primary-600 hover:text-white hover:border-primary-600',
   },
   {
     name: 'ResearchGate',
-    url: '#',
+    url: 'https://www.researchgate.net/profile/Md-Zohurul-Islam-2?ev=hdr_xprf',
     icon: <BookOpen size={24} />,
     color: 'bg-white text-neutral-700 border-neutral-200',
     hoverColor: 'hover:bg-accent-600 hover:text-white hover:border-accent-600',
   },
   {
     name: 'LinkedIn',
-    url: '#',
+    url: 'https://www.linkedin.com/in/md-zohurul-islam-a80673292/',
     icon: <Linkedin size={24} />,
     color: 'bg-white text-neutral-700 border-neutral-200',
     hoverColor: 'hover:bg-sky-600 hover:text-white hover:border-sky-600',
+  },
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/ZOHURUL.CSE.PUST/',
+    icon: <Facebook size={24} />,
+    color: 'bg-white text-neutral-700 border-neutral-200',
+    hoverColor: 'hover:bg-blue-600 hover:text-white hover:border-blue-600',
+  },
+  {
+    name: 'ORCID',
+    url: 'https://orcid.org/my-orcid?orcid=0009-0008-7113-6788',
+    icon: <BadgeCheck size={24} />,
+    color: 'bg-white text-neutral-700 border-neutral-200',
+    hoverColor: 'hover:bg-emerald-600 hover:text-white hover:border-emerald-600',
+  },
+  {
+    name: 'Web of Science',
+    url: 'https://www.webofscience.com/wos/author/record/PQV-7917-2026',
+    icon: <Globe size={24} />,
+    color: 'bg-white text-neutral-700 border-neutral-200',
+    hoverColor: 'hover:bg-amber-600 hover:text-white hover:border-amber-600',
   },
 ];
 
