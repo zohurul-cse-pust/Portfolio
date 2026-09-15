@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MapPin, Mail, ArrowDown, Sparkles } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
+import zohurulImg from '@/assets/images/zohurul.jpg';
 
 export default function Hero() {
   const interests = personalInfo.interests;
@@ -44,25 +45,9 @@ export default function Hero() {
           
           {/* Main content column */}
           <div className="lg:col-span-7 order-2 lg:order-1">
-            <div className="flex items-center gap-4 mb-6 animate-fade-down">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-300" />
-                <img
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white/20 shadow-2xl"
-                />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <Sparkles className="text-accent-400" size={18} />
-                  <span className="text-accent-300 font-medium text-xs sm:text-sm tracking-wider uppercase">Welcome to my portfolio</span>
-                </div>
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  Available for Research
-                </span>
-              </div>
+            <div className="flex items-center gap-2 mb-6 animate-fade-down">
+              <Sparkles className="text-accent-400" size={20} />
+              <span className="text-accent-300 font-medium text-sm tracking-wider uppercase">Welcome to my portfolio</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-up leading-tight">
@@ -144,7 +129,7 @@ export default function Hero() {
               <div className="relative rounded-3xl overflow-hidden bg-neutral-900/90 border border-white/10 backdrop-blur-xl p-3 shadow-2xl">
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-950">
                   <img
-                    src={personalInfo.avatar}
+                    src={zohurulImg}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 ease-out"
                   />
