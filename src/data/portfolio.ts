@@ -6,8 +6,8 @@ export const personalInfo = {
   location: 'Pabna-6600, Bangladesh',
   emails: ['mdzohu@gmail.com', 'zohurul.210115@s.pust.ac.bd'],
   bio: [
-    "My name is Md. Zohurul Islam, and I am currently pursuing a B.Sc. in Computer Science and Engineering at Pabna University of Science and Technology in Bangladesh. My areas of interest are Artificial Intelligence, Machine Learning, Hyperspectral Imaging, and Image Reconstruction.",
-    "As an undergraduate student with a strong interest in research, I started working in the field during my last year of study. My early research experience has shown me how modern AI techniques can be applied to solve real-world problems in image processing and intelligent systems, as well as to extract significant patterns from complicated datasets. My goal is to keep improving in this area and advance as a researcher in intelligent systems and AI-driven imaging.",
+    "My name is Md. Zohurul Islam, and I am a Computer Science and Engineering graduate from Pabna University of Science and Technology, Bangladesh. My areas of interest are Artificial Intelligence, Machine Learning, Hyperspectral Imaging, and Image Reconstruction.",
+    "I developed a strong interest in research during my undergraduate studies and began working on AI-driven solutions for real-world problems in imaging and intelligent systems. Through my research experience, I have explored how modern AI techniques can be applied to image processing, intelligent systems, and the analysis of complex datasets to extract meaningful patterns and insights. My goal is to continue developing my expertise in these areas and advance as a researcher in intelligent systems and AI-driven imaging.",
   ],
   interests: [
     'Artificial Intelligence',
