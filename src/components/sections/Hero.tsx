@@ -62,15 +62,23 @@ export default function Hero() {
               {personalInfo.university}
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 text-neutral-400 text-sm mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <span className="flex items-center gap-1.5">
+            <div className="flex flex-wrap items-start gap-6 text-neutral-400 text-sm mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <span className="flex items-center gap-1.5 pt-0.5">
                 <MapPin size={16} className="text-primary-400" />
                 {personalInfo.location}
               </span>
-              <span className="flex items-center gap-1.5">
-                <Mail size={16} className="text-primary-400" />
-                {personalInfo.emails[0]}
-              </span>
+              <div className="flex flex-col gap-1.5">
+                {personalInfo.emails.map((email) => (
+                  <a
+                    key={email}
+                    href={`mailto:${email}`}
+                    className="flex items-center gap-1.5 hover:text-primary-300 transition-colors"
+                  >
+                    <Mail size={16} className="text-primary-400 flex-shrink-0" />
+                    <span>{email}</span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Typing animation */}
