@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Home, GraduationCap, Briefcase, FolderGit2, BookOpen, Trophy, Mail, Menu, X } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
+import zohurulImg from '@/assets/images/zohurul.jpg';
 
 type NavItem = {
   id: string;
@@ -36,6 +37,11 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
       {/* Mobile top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-white/90 backdrop-blur-md border-b border-neutral-200 px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-3">
+          <img
+            src={zohurulImg}
+            alt={personalInfo.name}
+            className="w-8 h-8 rounded-full object-cover border border-primary-500/30"
+          />
           <span className="font-bold text-neutral-900 text-sm">{personalInfo.name}</span>
         </div>
         <button
@@ -73,7 +79,17 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
       <aside className="fixed left-0 top-0 bottom-0 w-72 hidden lg:flex flex-col bg-white border-r border-neutral-200 z-30">
         <div className="p-8 border-b border-neutral-200">
           <div className="flex flex-col items-center text-center">
-            <h1 className="font-bold text-neutral-900 text-xl leading-tight">{personalInfo.name}</h1>
+            <div className="relative mb-4 group">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden ring-4 ring-primary-500/20 shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:ring-primary-500/40">
+                <img
+                  src={zohurulImg}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 ring-2 ring-white" title="Active" />
+            </div>
+            <h1 className="font-bold text-neutral-900 text-lg leading-tight">{personalInfo.name}</h1>
             <p className="text-sm text-neutral-500 mt-1">CSE Researcher</p>
             <div className="mt-3 px-3 py-1 rounded-full bg-accent-50 text-accent-700 text-xs font-medium border border-accent-200">
               PUST, Bangladesh
