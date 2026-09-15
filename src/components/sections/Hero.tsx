@@ -39,79 +39,134 @@ export default function Hero() {
       <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-accent-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-16 pt-20 lg:pt-0 pb-16">
-        <div className="flex items-center gap-2 mb-6 animate-fade-down">
-          <Sparkles className="text-accent-400" size={20} />
-          <span className="text-accent-300 font-medium text-sm tracking-wider uppercase">Welcome to my portfolio</span>
-        </div>
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16 pt-24 lg:pt-16 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          {/* Main content column */}
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            <div className="flex items-center gap-4 mb-6 animate-fade-down">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-300" />
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-white/20 shadow-2xl"
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <Sparkles className="text-accent-400" size={18} />
+                  <span className="text-accent-300 font-medium text-xs sm:text-sm tracking-wider uppercase">Welcome to my portfolio</span>
+                </div>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Available for Research
+                </span>
+              </div>
+            </div>
 
-        <h1 className="text-5xl lg:text-7xl font-bold text-white mb-4 animate-fade-up leading-tight">
-          {personalInfo.name}
-        </h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 animate-fade-up leading-tight">
+              {personalInfo.name}
+            </h1>
 
-        <p className="text-xl lg:text-2xl text-primary-200 font-medium mb-3 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-          {personalInfo.title}
-        </p>
-
-        <p className="text-lg text-neutral-300 mb-2 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          {personalInfo.university}
-        </p>
-
-        <div className="flex flex-wrap items-center gap-4 text-neutral-400 text-sm mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-          <span className="flex items-center gap-1.5">
-            <MapPin size={16} className="text-primary-400" />
-            {personalInfo.location}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Mail size={16} className="text-primary-400" />
-            {personalInfo.emails[0]}
-          </span>
-        </div>
-
-        {/* Typing animation */}
-        <div className="mb-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          <p className="text-neutral-400 text-sm mb-2">Research Interests</p>
-          <div className="h-10 flex items-center">
-            <span className="text-2xl lg:text-3xl font-serif italic gradient-text typing-cursor">
-              {typedText}
-            </span>
-          </div>
-        </div>
-
-        {/* Bio */}
-        <div className="space-y-4 max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.5s' }}>
-          {personalInfo.bio.map((para, i) => (
-            <p key={i} className="text-neutral-300 leading-relaxed text-base">
-              {para}
+            <p className="text-xl lg:text-2xl text-primary-200 font-medium mb-3 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              {personalInfo.title}
             </p>
-          ))}
-        </div>
 
-        {/* Interest chips */}
-        <div className="flex flex-wrap gap-3 mb-12 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-          {interests.map((interest) => (
-            <span
-              key={interest}
-              className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-neutral-200 text-sm font-medium backdrop-blur-sm hover:bg-white/10 hover:border-primary-400/50 transition-all cursor-default"
+            <p className="text-lg text-neutral-300 mb-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              {personalInfo.university}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 text-neutral-400 text-sm mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <span className="flex items-center gap-1.5">
+                <MapPin size={16} className="text-primary-400" />
+                {personalInfo.location}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Mail size={16} className="text-primary-400" />
+                {personalInfo.emails[0]}
+              </span>
+            </div>
+
+            {/* Typing animation */}
+            <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+              <p className="text-neutral-400 text-sm mb-2">Research Interests</p>
+              <div className="h-10 flex items-center">
+                <span className="text-2xl lg:text-3xl font-serif italic gradient-text typing-cursor">
+                  {typedText}
+                </span>
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="space-y-4 max-w-2xl mb-8 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+              {personalInfo.bio.map((para, i) => (
+                <p key={i} className="text-neutral-300 leading-relaxed text-base">
+                  {para}
+                </p>
+              ))}
+            </div>
+
+            {/* Interest chips */}
+            <div className="flex flex-wrap gap-2.5 mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
+              {interests.map((interest) => (
+                <span
+                  key={interest}
+                  className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-neutral-200 text-sm font-medium backdrop-blur-sm hover:bg-white/10 hover:border-primary-400/50 transition-all cursor-default"
+                >
+                  {interest}
+                </span>
+              ))}
+            </div>
+
+            {/* Scroll indicator */}
+            <a
+              href="#education"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors group animate-fade-up"
+              style={{ animationDelay: '0.7s' }}
             >
-              {interest}
-            </span>
-          ))}
-        </div>
+              <span className="text-xs uppercase tracking-wider">Explore</span>
+              <ArrowDown size={18} className="animate-bounce group-hover:text-primary-400" />
+            </a>
+          </div>
 
-        {/* Scroll indicator */}
-        <a
-          href="#education"
-          onClick={(e) => {
-            e.preventDefault();
-            document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="inline-flex flex-col items-center gap-2 text-neutral-400 hover:text-white transition-colors group animate-fade-up"
-          style={{ animationDelay: '0.7s' }}
-        >
-          <span className="text-xs uppercase tracking-wider">Explore</span>
-          <ArrowDown size={20} className="animate-bounce group-hover:text-primary-400" />
-        </a>
+          {/* Profile Photo Card column */}
+          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            <div className="relative group max-w-sm w-full">
+              {/* Decorative background glow */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-primary-500 to-accent-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500" />
+              
+              {/* Card container */}
+              <div className="relative rounded-3xl overflow-hidden bg-neutral-900/90 border border-white/10 backdrop-blur-xl p-3 shadow-2xl">
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-950">
+                  <img
+                    src={personalInfo.avatar}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent opacity-60" />
+                </div>
+                
+                {/* Floating status tag */}
+                <div className="p-4 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-white font-bold text-base">{personalInfo.name}</h3>
+                    <p className="text-xs text-primary-300">PUST CSE Researcher</p>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    Available
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );

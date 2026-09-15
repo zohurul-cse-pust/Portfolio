@@ -1,5 +1,6 @@
 export const personalInfo = {
   name: 'Md. Zohurul Islam',
+  avatar: '/images/zohurul.jpg',
   title: 'Computer Science & Engineering Researcher',
   university: 'Pabna University of Science and Technology',
   location: 'Pabna-6600, Bangladesh',
