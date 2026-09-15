@@ -128,6 +128,9 @@ export type AwardItem = {
   title: string;
   event: string;
   date: string;
+  image?: string;
+  images?: string[];
+  description?: string;
 };
 
 export const awards: AwardItem[] = [
@@ -135,11 +138,24 @@ export const awards: AwardItem[] = [
     title: '4th Runners-up',
     event: 'Intra University Programming Contest 2.0 (CSE, PUST)',
     date: 'August 2023',
+    image: 'images/484216060_1493272975003341_837050653598604810_n.jpg',
+    images: [
+      'images/484216060_1493272975003341_837050653598604810_n.jpg',
+      'images/484907233_1500314750965830_5978657395291000912_n.jpg',
+      'images/FB_IMG_1775265896075.jpg.jpeg',
+    ],
   },
   {
     title: '6th Runners-up',
     event: 'Intra University Programming Contest 1.0 (CSE, PUST)',
     date: 'June 2023',
+    image: 'images/FB_IMG_1775265906173.jpg.jpeg',
+    images: [
+      'images/FB_IMG_1775265906173.jpg.jpeg',
+      'images/Screenshot 2026-09-15 153100.png',
+      'images/Screenshot 2026-09-15 153243.png',
+      'images/siMYP.jpg.jpeg',
+    ],
   },
 ];
 
