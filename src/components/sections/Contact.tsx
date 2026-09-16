@@ -59,22 +59,22 @@ export default function Contact() {
   const { ref, revealed } = useScrollReveal();
 
   return (
-    <section id="contact" className="py-24 lg:py-32 animated-gradient relative overflow-hidden">
-      {/* Decorative floating blobs and grid pattern */}
-      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-accent-500/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+    <section id="contact" className="py-24 lg:py-32 bg-neutral-50 relative overflow-hidden">
+      {/* Decorative gradients */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-100/50 rounded-full blur-3xl" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="max-w-4xl mx-auto px-6 lg:px-12 relative z-10" ref={ref}>
         <div className={`mb-12 reveal ${revealed ? 'revealed' : ''}`}>
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-white/10 text-accent-300 flex items-center justify-center border border-white/15 backdrop-blur-sm">
+            <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center">
               <Share2 size={22} />
             </div>
-            <span className="text-accent-300 font-semibold text-sm uppercase tracking-wider">Connect & Collaborate</span>
+            <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">Connect & Collaborate</span>
           </div>
-          <h2 className="text-4xl font-bold text-white">Contact</h2>
-          <p className="text-neutral-300 mt-4 max-w-xl">
+          <h2 className="text-4xl font-bold text-neutral-900">Contact</h2>
+          <p className="text-neutral-600 mt-4 max-w-xl">
             Feel free to connect for research collaborations, academic inquiries, or professional networking across these platforms.
           </p>
         </div>
@@ -99,8 +99,8 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className={`mt-16 pt-8 border-t border-white/10 text-center reveal ${revealed ? 'revealed' : ''}`} style={{ transitionDelay: '200ms' }}>
-          <p className="text-neutral-400 text-sm">
+        <div className={`mt-16 pt-8 border-t border-neutral-200 text-center reveal ${revealed ? 'revealed' : ''}`} style={{ transitionDelay: '200ms' }}>
+          <p className="text-neutral-500 text-sm">
             © 2026 Md. Zohurul Islam · Department of CSE, Pabna University of Science and Technology
           </p>
         </div>
