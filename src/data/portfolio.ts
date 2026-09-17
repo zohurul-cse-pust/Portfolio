@@ -4,6 +4,7 @@ export const personalInfo = {
   title: 'Computer Science & Engineering Researcher',
   university: 'Pabna University of Science and Technology',
   location: 'Pabna-6600, Bangladesh',
+  phone: '+8801796092521',
   emails: ['mdzohu@gmail.com', 'zohurul.210115@s.pust.ac.bd'],
   bio: [
     "My name is Md. Zohurul Islam, and I am a Computer Science and Engineering graduate from Pabna University of Science and Technology, Bangladesh. My areas of interest are Artificial Intelligence, Machine Learning, Hyperspectral Imaging, and Image Reconstruction.",

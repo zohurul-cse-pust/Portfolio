@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MapPin, Mail, ArrowDown } from 'lucide-react';
+import { MapPin, Mail, ArrowDown, Phone } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import zohurulImg from '@/assets/images/zohurul.jpg';
 
@@ -62,10 +62,19 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap items-start gap-6 text-neutral-500 text-sm mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <span className="flex items-center gap-1.5 pt-0.5">
-                <MapPin size={16} className="text-primary-600" />
-                {personalInfo.location}
-              </span>
+              <div className="flex flex-col gap-1.5">
+                <span className="flex items-center gap-1.5">
+                  <MapPin size={16} className="text-primary-600 flex-shrink-0" />
+                  {personalInfo.location}
+                </span>
+                <a
+                  href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
+                  className="flex items-center gap-1.5 hover:text-primary-700 transition-colors"
+                >
+                  <Phone size={16} className="text-primary-600 flex-shrink-0" />
+                  <span>{personalInfo.phone}</span>
+                </a>
+              </div>
               <div className="flex flex-col gap-1.5">
                 {personalInfo.emails.map((email) => (
                   <a
