@@ -53,6 +53,8 @@ export default function Publications() {
 
                     <a
                       href={pub.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-600 hover:text-primary-700 group/link"
                     >
                       Article Link

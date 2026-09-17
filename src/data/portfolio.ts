@@ -113,7 +113,7 @@ export const publications: PublicationItem[] = [
     journal: 'Talanta (Elsevier)',
     metrics: 'Q1 · IF: 6.1',
     year: '2026',
-    link: '#',
+    link: 'https://www.sciencedirect.com/science/article/abs/pii/S0039914026006119?via%3Dihub',
   },
   {
     title: 'Explainable AI-Guided Hyperspectral Feature Selection in Fruit Quality Assessment and Spatial Visualization',
@@ -121,7 +121,7 @@ export const publications: PublicationItem[] = [
     journal: 'Journal of Food Science (Wiley)',
     metrics: 'Q1 · IF: 3.4',
     year: '2026',
-    link: '#',
+    link: 'https://ift.onlinelibrary.wiley.com/doi/10.1111/1750-3841.70976',
   },
 ];
 
