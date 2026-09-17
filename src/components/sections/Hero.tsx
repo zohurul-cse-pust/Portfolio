@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MapPin, Mail, ArrowDown, Sparkles } from 'lucide-react';
+import { MapPin, Mail, ArrowDown } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import zohurulImg from '@/assets/images/zohurul.jpg';
 
@@ -46,7 +46,6 @@ export default function Hero() {
           {/* Main content column */}
           <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="flex items-center gap-2 mb-6 animate-fade-down">
-              <Sparkles className="text-accent-600" size={20} />
               <span className="text-accent-600 font-semibold text-sm tracking-wider uppercase">Welcome to my portfolio</span>
             </div>
 
