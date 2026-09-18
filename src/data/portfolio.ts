@@ -140,15 +140,15 @@ export const awards: AwardItem[] = [
     title: '4th Runner-Up',
     event: 'Intra University Programming Contest 2.0 (CSE, PUST)',
     date: 'August 2023',
-    image: 'images/1.jpeg',
-    images: ['images/1.jpeg'],
+    image: 'images/1.jpg',
+    images: ['images/1.jpg', 'images/1 .jpeg'],
   },
   {
     title: '6th Runner-Up',
     event: 'Intra University Programming Contest 1.0 (CSE, PUST)',
     date: 'June 2023',
     image: 'images/2.jpeg',
-    images: ['images/2.jpeg'],
+    images: ['images/2.jpeg', 'images/2 .jpg'],
   },
   {
     title: 'Volunteer',
