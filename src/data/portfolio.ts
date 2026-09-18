@@ -147,8 +147,8 @@ export const awards: AwardItem[] = [
     title: '6th Runner-Up',
     event: 'Intra University Programming Contest 1.0 (CSE, PUST)',
     date: 'June 2023',
-    image: 'images/2.jpeg',
-    images: ['images/2.jpeg', 'images/2 .jpg'],
+    image: 'images/2.jpg',
+    images: ['images/2.jpg', 'images/2 .jpg'],
   },
   {
     title: 'Volunteer',
