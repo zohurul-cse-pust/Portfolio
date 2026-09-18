@@ -137,29 +137,63 @@ export type AwardItem = {
 
 export const awards: AwardItem[] = [
   {
-    title: '4th Runners-up',
+    title: '4th Runner-Up',
     event: 'Intra University Programming Contest 2.0 (CSE, PUST)',
     date: 'August 2023',
-    image: 'images/484216060_1493272975003341_837050653598604810_n.jpg',
-    images: [
-      'images/484216060_1493272975003341_837050653598604810_n.jpg',
-      'images/484907233_1500314750965830_5978657395291000912_n.jpg',
-      'images/FB_IMG_1775265896075.jpg.jpeg',
-    ],
+    image: 'images/1.jpeg',
+    images: ['images/1.jpeg'],
   },
   {
-    title: '6th Runners-up',
+    title: '6th Runner-Up',
     event: 'Intra University Programming Contest 1.0 (CSE, PUST)',
     date: 'June 2023',
-    image: 'images/FB_IMG_1775265906173.jpg.jpeg',
-    images: [
-      'images/FB_IMG_1775265906173.jpg.jpeg',
-      'images/Screenshot 2026-09-15 153100.png',
-      'images/Screenshot 2026-09-15 153243.png',
-      'images/siMYP.jpg.jpeg',
-    ],
+    image: 'images/2.jpeg',
+    images: ['images/2.jpeg'],
+  },
+  {
+    title: 'Volunteer',
+    event: 'International Conference on Power, Electronics, Communications, Computing, and Intelligent Infrastructure (PECCII 2026)',
+    date: 'June 17–18, 2026',
+    image: 'images/3.jpeg',
+    images: ['images/3.jpeg', 'images/3 .jpeg'],
+  },
+  {
+    title: 'Honorable Mention',
+    event: 'International Collegiate Programming Contest (ICPC)',
+    date: 'October 3–November 9, 2024',
+    image: 'images/4.png',
+    images: ['images/4.png'],
+  },
+  {
+    title: 'Effective Data Sharing for Sustainable Development',
+    event: 'United Nations System Staff College (UNSSC)',
+    date: 'September 14, 2026',
+    image: 'images/5.png',
+    images: ['images/5.png'],
+  },
+  {
+    title: 'Mobile App Development Training',
+    event: 'Android, Flutter & iOS',
+    date: 'August 31, 2025',
+    image: 'images/6.png',
+    images: ['images/6.png'],
+  },
+  {
+    title: 'Programming Competition',
+    event: 'IEEE PUST Student Branch',
+    date: 'October 27, 2024',
+    image: 'images/7.jpeg',
+    images: ['images/7.jpeg'],
+  },
+  {
+    title: 'English Spoken Course',
+    event: 'Certificate of Completion',
+    date: 'July 15, 2018',
+    image: 'images/8.jpeg',
+    images: ['images/8.jpeg'],
   },
 ];
+
 
 export const socialLinks = [
   { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=SXeNViUAAAAJ&hl=en', icon: 'graduation' },
