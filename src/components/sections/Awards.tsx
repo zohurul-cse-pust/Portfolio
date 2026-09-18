@@ -86,32 +86,52 @@ export default function Awards() {
 
                     {/* Image Thumbnails Gallery */}
                     {awardImages.length > 0 && (
-                      <div className="mt-4 pt-4 border-t border-neutral-100">
-                        <div className="flex items-center justify-between mb-2.5">
-                          <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider flex items-center gap-1">
-                            <ImageIcon size={13} />
-                            Award Photos ({awardImages.length})
+                      <div className="mt-5 pt-4 border-t border-neutral-100">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider flex items-center gap-1.5">
+                            <ImageIcon size={14} className="text-accent-500" />
+                            Award Photo{awardImages.length > 1 ? `s (${awardImages.length})` : ''}
                           </span>
-                          <span className="text-xs text-accent-600 font-medium cursor-pointer hover:underline" onClick={() => openLightbox(awardIdx, 0)}>
-                            Click to view full screen
+                          <span
+                            className="text-xs text-accent-600 font-semibold cursor-pointer hover:text-accent-700 flex items-center gap-1 transition-colors"
+                            onClick={() => openLightbox(awardIdx, 0)}
+                          >
+                            <ZoomIn size={14} />
+                            Full Screen
                           </span>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-2.5">
+                        <div
+                          className={`grid gap-3 ${
+                            awardImages.length === 1
+                              ? 'grid-cols-1'
+                              : awardImages.length === 2
+                              ? 'grid-cols-2'
+                              : 'grid-cols-3'
+                          }`}
+                        >
                           {awardImages.map((img, imgIdx) => (
                             <div
                               key={imgIdx}
                               onClick={() => openLightbox(awardIdx, imgIdx)}
-                              className="relative group/img aspect-video rounded-xl overflow-hidden cursor-pointer border border-neutral-200 bg-neutral-100 shadow-sm"
+                              className={`relative group/img rounded-xl overflow-hidden cursor-pointer border border-neutral-200/80 bg-neutral-900/5 shadow-sm hover:shadow-md transition-all duration-300 ${
+                                awardImages.length === 1
+                                  ? 'h-56 sm:h-64'
+                                  : awardImages.length === 2
+                                  ? 'h-44 sm:h-48'
+                                  : 'h-36 sm:h-40'
+                              }`}
                             >
                               <img
                                 src={getImageUrl(img)}
                                 alt={`${award.title} photo ${imgIdx + 1}`}
-                                className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500"
+                                className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                                 loading="lazy"
                               />
-                              <div className="absolute inset-0 bg-neutral-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center text-white">
-                                <ZoomIn size={18} />
+                              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-neutral-950/20 to-transparent opacity-0 group-hover/img:opacity-100 transition-all duration-300 flex items-center justify-center text-white">
+                                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-lg group-hover/img:scale-110 transition-transform">
+                                  <ZoomIn size={20} />
+                                </div>
                               </div>
                             </div>
                           ))}
