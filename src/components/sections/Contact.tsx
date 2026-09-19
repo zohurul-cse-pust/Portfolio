@@ -78,9 +78,30 @@ export default function Contact() {
           <p className="text-neutral-600 mt-4 max-w-xl">
             Feel free to connect for research collaborations, academic inquiries, or professional networking across these platforms.
           </p>
+        </div>
 
-          {/* Direct Contact Info Card */}
-          <div className="flex flex-wrap items-start gap-8 text-neutral-600 text-sm mt-6 p-5 rounded-2xl bg-white border border-neutral-200 shadow-sm">
+        {/* Social links grid */}
+        <div className={`grid md:grid-cols-2 gap-4 reveal ${revealed ? 'revealed' : ''}`} style={{ transitionDelay: '100ms' }}>
+          {socials.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group flex items-center justify-between p-5 rounded-2xl border transition-all duration-300 ${social.color} ${social.hoverColor}`}
+            >
+              <div className="flex items-center gap-3">
+                {social.icon}
+                <span className="font-medium">{social.name}</span>
+              </div>
+              <Send size={18} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+            </a>
+          ))}
+        </div>
+
+        {/* Direct Contact Info Card (Location, Phone, Emails) */}
+        <div className={`mt-8 reveal ${revealed ? 'revealed' : ''}`} style={{ transitionDelay: '150ms' }}>
+          <div className="flex flex-wrap items-start gap-8 text-neutral-600 text-sm p-5 rounded-2xl bg-white border border-neutral-200 shadow-sm">
             <div className="flex flex-col gap-2">
               <span className="flex items-center gap-2">
                 <MapPin size={16} className="text-primary-600 flex-shrink-0" />
@@ -107,25 +128,6 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Social links grid */}
-        <div className={`grid md:grid-cols-2 gap-4 reveal ${revealed ? 'revealed' : ''}`} style={{ transitionDelay: '100ms' }}>
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group flex items-center justify-between p-5 rounded-2xl border transition-all duration-300 ${social.color} ${social.hoverColor}`}
-            >
-              <div className="flex items-center gap-3">
-                {social.icon}
-                <span className="font-medium">{social.name}</span>
-              </div>
-              <Send size={18} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-            </a>
-          ))}
         </div>
 
         {/* Footer */}
