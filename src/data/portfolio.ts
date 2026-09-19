@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: '+8801796092521',
   emails: ['mdzohu@gmail.com', 'zohurul.210115@s.pust.ac.bd'],
   bio: [
-    "My name is Md. Zohurul Islam, and I am a Computer Science and Engineering graduate from Pabna University of Science and Technology, Bangladesh, under the supervision of Associate Professor Dr. Md. Toukir Ahmed, PhD (UIUC, USA). My areas of interest are Artificial Intelligence, Machine Learning, Hyperspectral Imaging, and Image Reconstruction.",
+    "My name is Md. Zohurul Islam, and I am a Computer Science and Engineering graduate from Pabna University of Science and Technology, Bangladesh, under the supervision of Associate Professor Dr. Md. Toukir Ahmed, PhD (UIUC, USA). My areas of interest are Artificial Intelligence, Machine Learning, Hyperspectral Imaging, Image Reconstruction, and Spectroscopy.",
     "I developed a strong interest in research during the final year of my undergraduate studies, when I began exploring AI-driven solutions to real-world problems in imaging and intelligent systems. Since then, I have explored how modern AI and machine learning techniques can be applied to image processing, intelligent systems, and the analysis of complex datasets to extract meaningful patterns and insights. These experiences have strengthened my interest in research and motivated me to further develop my expertise in intelligent systems and AI-driven imaging. My goal is to continue advancing as a researcher and contribute to the development of innovative AI-based solutions for real-world challenges.",
   ],
   interests: [
@@ -15,6 +15,7 @@ export const personalInfo = {
     'Machine Learning',
     'Hyperspectral Imaging',
     'Image Reconstruction',
+    'Spectroscopy',
   ],
 };
 

@@ -9,23 +9,24 @@ export default function Hero() {
   const [typedText, setTypedText] = useState('');
 
   useEffect(() => {
-    if (typedIndex >= interests.length) {
-      const resetTimer = setTimeout(() => {
-        setTypedIndex(0);
-        setTypedText('');
-      }, 3000);
-      return () => clearTimeout(resetTimer);
+    const currentWord = interests[typedIndex];
+    if (!currentWord) {
+      setTypedIndex(0);
+      setTypedText('');
+      return;
     }
 
-    const currentWord = interests[typedIndex];
     if (typedText === currentWord) {
-      const nextTimer = setTimeout(() => setTypedIndex((i) => i + 1), 2000);
+      const nextTimer = setTimeout(() => {
+        setTypedIndex((i) => (i + 1) % interests.length);
+        setTypedText('');
+      }, 2000);
       return () => clearTimeout(nextTimer);
     }
 
     const timer = setTimeout(() => {
       setTypedText(currentWord.slice(0, typedText.length + 1));
-    }, 80);
+    }, 70);
     return () => clearTimeout(timer);
   }, [typedText, typedIndex, interests]);
 
@@ -89,13 +90,34 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Typing animation */}
+            {/* Research Interests (Dynamic Typewriter + Static Pills) */}
             <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-neutral-500 text-sm mb-2 font-medium">Research Interests</p>
-              <div className="h-10 flex items-center">
+              <div className="h-10 flex items-center mb-4">
                 <span className="text-2xl lg:text-3xl font-serif italic gradient-text typing-cursor">
                   {typedText}
                 </span>
+              </div>
+              <div className="flex flex-wrap gap-2.5">
+                {interests.map((interest, idx) => {
+                  const isActive = idx === typedIndex;
+                  return (
+                    <button
+                      key={interest}
+                      onClick={() => {
+                        setTypedIndex(idx);
+                        setTypedText('');
+                      }}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-sm border text-left cursor-pointer ${
+                        isActive
+                          ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white border-transparent shadow-md scale-105 ring-2 ring-primary-300 ring-offset-1'
+                          : 'bg-white border-neutral-200 text-neutral-700 hover:bg-neutral-100 hover:border-primary-300'
+                      }`}
+                    >
+                      {interest}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -105,18 +127,6 @@ export default function Hero() {
                 <p key={i} className="text-neutral-700 leading-relaxed text-base text-justify">
                   {para}
                 </p>
-              ))}
-            </div>
-
-            {/* Interest chips */}
-            <div className="flex flex-wrap gap-2.5 mb-10 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-              {interests.map((interest) => (
-                <span
-                  key={interest}
-                  className="px-4 py-2 rounded-full bg-white border border-neutral-200 text-neutral-700 text-sm font-medium hover:bg-neutral-100 hover:border-primary-300 transition-all shadow-sm cursor-default"
-                >
-                  {interest}
-                </span>
               ))}
             </div>
 
