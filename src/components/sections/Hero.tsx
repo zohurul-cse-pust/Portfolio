@@ -1,36 +1,9 @@
-import { useEffect, useState } from 'react';
 import { MapPin, Mail, ArrowDown, Phone } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import zohurulImg from '@/assets/images/zohurul.jpg';
 
 export default function Hero() {
   const interests = personalInfo.interests;
-  const [typedIndex, setTypedIndex] = useState(0);
-  const [typedText, setTypedText] = useState('');
-
-  useEffect(() => {
-    const currentWord = interests[typedIndex];
-    if (!currentWord) {
-      setTypedIndex(0);
-      setTypedText('');
-      return;
-    }
-
-    if (typedText === currentWord) {
-      const nextTimer = setTimeout(() => {
-        setTypedIndex((i) => (i + 1) % interests.length);
-        setTypedText('');
-      }, 2000);
-      return () => clearTimeout(nextTimer);
-    }
-
-    const timer = setTimeout(() => {
-      setTypedText(currentWord.slice(0, typedText.length + 1));
-    }, 70);
-    return () => clearTimeout(timer);
-  }, [typedText, typedIndex, interests]);
-
-  const currentWord = interests[typedIndex] || '';
 
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-neutral-50">
@@ -90,34 +63,18 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Research Interests (Dynamic Typewriter + Static Pills) */}
+            {/* Research Interests Pills */}
             <div className="mb-8 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-              <p className="text-neutral-500 text-sm mb-2 font-medium">Research Interests</p>
-              <div className="h-10 flex items-center mb-4">
-                <span className="text-2xl lg:text-3xl font-serif italic gradient-text typing-cursor">
-                  {typedText}
-                </span>
-              </div>
+              <p className="text-neutral-500 text-sm mb-3 font-medium">Research Interests</p>
               <div className="flex flex-wrap gap-2.5">
-                {interests.map((interest, idx) => {
-                  const isActive = idx === typedIndex;
-                  return (
-                    <button
-                      key={interest}
-                      onClick={() => {
-                        setTypedIndex(idx);
-                        setTypedText('');
-                      }}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-sm border text-left cursor-pointer ${
-                        isActive
-                          ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white border-transparent shadow-md scale-105 ring-2 ring-primary-300 ring-offset-1'
-                          : 'bg-white border-neutral-200 text-neutral-700 hover:bg-neutral-100 hover:border-primary-300'
-                      }`}
-                    >
-                      {interest}
-                    </button>
-                  );
-                })}
+                {interests.map((interest) => (
+                  <span
+                    key={interest}
+                    className="px-4 py-2 rounded-full bg-white border border-neutral-200 text-neutral-700 text-sm font-medium hover:bg-neutral-100 hover:border-primary-300 transition-all shadow-sm cursor-default"
+                  >
+                    {interest}
+                  </span>
+                ))}
               </div>
             </div>
 
