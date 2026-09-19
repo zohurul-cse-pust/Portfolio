@@ -1,5 +1,6 @@
-import { GraduationCap, BookOpen, Linkedin, Facebook, BadgeCheck, Globe, Send, Share2 } from 'lucide-react';
+import { GraduationCap, BookOpen, Linkedin, Facebook, BadgeCheck, Send, Share2, MapPin, Mail, Phone } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { personalInfo } from '@/data/portfolio';
 
 type SocialLink = {
   name: string;
@@ -77,6 +78,35 @@ export default function Contact() {
           <p className="text-neutral-600 mt-4 max-w-xl">
             Feel free to connect for research collaborations, academic inquiries, or professional networking across these platforms.
           </p>
+
+          {/* Direct Contact Info Card */}
+          <div className="flex flex-wrap items-start gap-8 text-neutral-600 text-sm mt-6 p-5 rounded-2xl bg-white border border-neutral-200 shadow-sm">
+            <div className="flex flex-col gap-2">
+              <span className="flex items-center gap-2">
+                <MapPin size={16} className="text-primary-600 flex-shrink-0" />
+                <span>{personalInfo.location}</span>
+              </span>
+              <a
+                href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
+                className="flex items-center gap-2 hover:text-primary-700 transition-colors"
+              >
+                <Phone size={16} className="text-primary-600 flex-shrink-0" />
+                <span>{personalInfo.phone}</span>
+              </a>
+            </div>
+            <div className="flex flex-col gap-2">
+              {personalInfo.emails.map((email) => (
+                <a
+                  key={email}
+                  href={`mailto:${email}`}
+                  className="flex items-center gap-2 hover:text-primary-700 transition-colors"
+                >
+                  <Mail size={16} className="text-primary-600 flex-shrink-0" />
+                  <span>{email}</span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Social links grid */}
