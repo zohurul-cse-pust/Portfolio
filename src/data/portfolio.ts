@@ -72,7 +72,7 @@ export const experiences: ExperienceItem[] = [
     department: 'Department of Computer Science and Engineering',
     organization: 'Pabna University of Science and Technology',
     location: 'Pabna-6600, Bangladesh',
-    period: 'January 2026 — Present',
+    period: 'January 2026 - Present',
     current: true,
   },
 ];
