@@ -37,7 +37,7 @@ export const education: EducationItem[] = [
     location: 'Pabna, Bangladesh',
     gpa: '3.25',
     gpaScale: '4.00',
-    period: '4th Year, 1st Semester',
+    period: 'CGPA',
   },
   {
     degree: 'Higher Secondary Certificate (HSC)',
