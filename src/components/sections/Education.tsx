@@ -61,6 +61,9 @@ export default function Education() {
                     </div>
                     <span className="text-xs text-neutral-400 font-medium">{item.period}</span>
                   </div>
+                  {item.note && (
+                    <p className="text-xs text-neutral-500 mt-2 italic">{item.note}</p>
+                  )}
                 </div>
               </div>
             ))}

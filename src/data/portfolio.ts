@@ -27,6 +27,7 @@ export type EducationItem = {
   gpa: string;
   gpaScale: string;
   period: string;
+  note?: string;
 };
 
 export const education: EducationItem[] = [
@@ -37,6 +38,7 @@ export const education: EducationItem[] = [
     gpa: '3.25',
     gpaScale: '4.00',
     period: 'CGPA',
+    note: 'CGPA above 3.50 in the final two semesters',
   },
   {
     degree: 'Higher Secondary Certificate (HSC)',
