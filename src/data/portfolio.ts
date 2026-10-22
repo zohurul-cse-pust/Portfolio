@@ -32,7 +32,6 @@ export type EducationItem = {
 export const education: EducationItem[] = [
   {
     degree: 'Bachelor of Science in Computer Science and Engineering',
-    status: 'Ongoing',
     institution: 'Pabna University of Science and Technology',
     location: 'Pabna, Bangladesh',
     gpa: '3.25',
