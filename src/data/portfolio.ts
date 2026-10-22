@@ -35,7 +35,7 @@ export const education: EducationItem[] = [
     status: 'Ongoing',
     institution: 'Pabna University of Science and Technology',
     location: 'Pabna, Bangladesh',
-    gpa: '3.51',
+    gpa: '3.25',
     gpaScale: '4.00',
     period: '4th Year, 1st Semester',
   },
