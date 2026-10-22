@@ -44,7 +44,7 @@ export const education: EducationItem[] = [
     location: 'Pabna, Bangladesh',
     gpa: '5.00',
     gpaScale: '5.00',
-    period: 'HSC',
+    period: 'GPA',
   },
   {
     degree: 'Secondary School Certificate (SSC)',
@@ -52,7 +52,7 @@ export const education: EducationItem[] = [
     location: 'Pabna, Bangladesh',
     gpa: '4.94',
     gpaScale: '5.00',
-    period: 'SSC',
+    period: 'GPA',
   },
 ];
 
