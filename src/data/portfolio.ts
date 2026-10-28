@@ -126,6 +126,14 @@ export const publications: PublicationItem[] = [
     year: '2026',
     link: 'https://ift.onlinelibrary.wiley.com/doi/10.1111/1750-3841.70976',
   },
+  {
+    title: 'Comparative Analysis of Explainable Hyperspectral Models for Broccoli Dry Matter Prediction',
+    authors: 'S.M. Hasan Sazzad Iqbal, Minhaz Ahmed Shikder, Md. Zohurul Islam, Md. Abu Johab, Most. Mira Khatun, Md. Niaz Imtiaz, Md. Shafiul Azam, Md. Abdur Rahim, Md Wadud Ahmed, & Md. Toukir Ahmed',
+    journal: 'Food Analytical Methods (Springer)',
+    metrics: 'Q2 · IF: 3.0',
+    year: '2026',
+    link: '#',
+  },
 ];
 
 export type AwardItem = {
