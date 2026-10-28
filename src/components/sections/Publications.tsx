@@ -51,15 +51,17 @@ export default function Publications() {
                       {pub.authors}
                     </p>
 
-                    <a
-                      href={pub.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-600 hover:text-primary-700 group/link"
-                    >
-                      Article Link
-                      <ExternalLink size={14} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                    </a>
+                    {pub.link && pub.link !== '#' && (
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-primary-600 hover:text-primary-700 group/link"
+                      >
+                        Article Link
+                        <ExternalLink size={14} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
